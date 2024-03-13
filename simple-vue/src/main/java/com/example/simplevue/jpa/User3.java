@@ -2,7 +2,7 @@ package com.example.simplevue.jpa;
 
 import jakarta.persistence.*;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Entity
 public class User3 {
@@ -15,5 +15,5 @@ public class User3 {
     private String pwd;
     private Boolean gender = true;
     private Boolean del;
-    private LocalDate datatime;
+    private LocalDateTime dateTime;
 }

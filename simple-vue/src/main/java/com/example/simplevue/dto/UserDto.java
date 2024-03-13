@@ -14,5 +14,5 @@ public class UserDto {
     private String pwd;
     private Boolean gender;
     private boolean del;
-    private LocalDateTime regDate;
+    private LocalDateTime dateTime;
 }

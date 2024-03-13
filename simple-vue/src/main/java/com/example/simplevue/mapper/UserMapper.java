@@ -18,6 +18,6 @@ public interface UserMapper {
     @Update("update user3 set del = true where id = #{id}")
     public int delete(int id);
 
-    @Insert("insert into user3 (name, email, pwd, gender) values (#{name}, #{email}, #{pwd}, #{gender})")
+    @Insert("insert into user3 (name, email, pwd, gender, datetime) values (#{name}, #{email}, #{pwd}, #{gender}, now())")
     public int save(UserDto userDto);
 }
