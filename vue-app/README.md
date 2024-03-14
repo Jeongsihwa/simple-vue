@@ -1,19 +1,12 @@
-# vue-app
+# vue 공부용 simple project
+## sptringboot 
+Spring Web <br>
+Spring Data JPA <br>
+MyBatis Framework <br>
+Lombok <br>
+MySQL Driver <br>
+Spring Boot Dev Tools 
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Vue
+npm install vue-router <br>
+npm install axios 
