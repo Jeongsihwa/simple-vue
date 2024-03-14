@@ -3,17 +3,16 @@ import HomeView from '../views/HomeView.vue'
 
 const routes = [
   {
-    path: '/',
-    name: 'home',
-    component: HomeView
+    path: '/', // HomeView로 이동할 path
+    name: 'home', // router name, 컴포넌트 이름과는 독립적
+    component: HomeView // path로 이동될 Component
   },
   {
-    path: '/user',
-    name: 'ListView',
-    component: () => import(/* webpackChunkName: "user" */ '../views/ListView.vue')
-  },
-  {
-    path: '/user/findById',
+    path: '/user', // ListView로 이동할 path
+    name: 'ListView', // router name
+    component: () => import(/* webpackChunkName: "user" */ '../views/ListView.vue') // path로 이동될 Component
+  },{
+    path: '/user/findById', // /:id 필수 
     name: 'SelectView',
     component: () => import(/* webpackChunkName: "user" */ '../views/SelectView.vue')
   },
@@ -35,3 +34,5 @@ const router = createRouter({
 })
 
 export default router
+
+

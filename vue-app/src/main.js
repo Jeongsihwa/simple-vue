@@ -3,5 +3,6 @@ import App from './App.vue'
 import router from './router'
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
- 
-createApp(App).use(router).mount('#app')
+import stroe from '@/store'
+
+createApp(App).use(router).use(stroe).mount('#app')

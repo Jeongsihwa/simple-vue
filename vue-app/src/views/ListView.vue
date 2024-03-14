@@ -13,7 +13,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr class="cursor-pointer" v-for="row in result" :key="row.id" v-on:click="href(row)">
+        <tr class="cursor-pointer" v-for="row in result" :key="row.id" @click="href(row)">
           <td>{{ row.name }}</td>
           <td>{{ row.email }}</td>
           <td>{{ row.dateTime }}</td>
@@ -25,10 +25,12 @@
 
 <script setup>
 import { getUserListRequest } from '@/apis';
+import store from '@/store';
+import { useRouter } from 'vue-router';
 import { onMounted, ref } from 'vue';
 
 const result = ref([]);
-
+const router = useRouter();
 const getFindAllResponse = (responseBody) => {
   if (!responseBody || responseBody.code !== '200') {
     alert('오류');
@@ -36,6 +38,13 @@ const getFindAllResponse = (responseBody) => {
   }
   console.log(responseBody);
   result.value = responseBody.userDtos;
+}
+
+const href = (row)  => {
+  console.log(row);
+  store.commit('setUser',row);
+  router.push({name: 'SelectView' });
+  
 }
 
 onMounted(() => {

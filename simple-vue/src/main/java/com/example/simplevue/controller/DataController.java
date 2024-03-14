@@ -32,13 +32,15 @@ public class DataController {
     public ResultDto editById(@RequestBody UserDto userDto){
         return userService.editById(userDto);
     }
+    @PostMapping("/save")
+    public ResultDto save(@RequestBody UserDto userDto){
+        log.info("userDto {}", userDto);
+        return userService.save(userDto);
+    }
     @DeleteMapping("/delete")
     public ResultDto delete(@RequestParam("id") int id){
         return userService.delete(id);
     }
-    @PutMapping("/save")
-    public ResultDto save(@RequestBody UserDto userDto){
-        return userService.save(userDto);
-    }
+
 }
 

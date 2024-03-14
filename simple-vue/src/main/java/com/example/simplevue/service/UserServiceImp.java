@@ -31,6 +31,7 @@ public class UserServiceImp implements UserService {
         int state = userDao.editById(userDto);
         ResultDto resultDto = ResultDto.failEdit();
         if(state == 1) return ResultDto.successEdit(userDto);
+
         return resultDto;
     }
 
